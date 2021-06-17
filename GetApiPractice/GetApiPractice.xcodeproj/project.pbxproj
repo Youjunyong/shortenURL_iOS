@@ -3,14 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		664EFCF890C8388ACCC4969F /* Pods_GetApiPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8BC7EB6C48240D167A4591 /* Pods_GetApiPractice.framework */; };
+		E1C5080D267A14E7007C3787 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5080C267A14E7007C3787 /* TableViewController.swift */; };
+		E1C50835267AFA71007C3787 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C50834267AFA71007C3787 /* DataManager.swift */; };
+		E1C5083F267B8375007C3787 /* BookMarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5083D267B8375007C3787 /* BookMarkTableViewCell.swift */; };
+		E1C50840267B8375007C3787 /* BookMarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C5083E267B8375007C3787 /* BookMarkTableViewCell.xib */; };
 		E1EC1D2726772F18003E58CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC1D2626772F18003E58CF /* AppDelegate.swift */; };
 		E1EC1D2926772F18003E58CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC1D2826772F18003E58CF /* SceneDelegate.swift */; };
-		E1EC1D2B26772F18003E58CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC1D2A26772F18003E58CF /* ViewController.swift */; };
+		E1EC1D2B26772F18003E58CF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC1D2A26772F18003E58CF /* AddViewController.swift */; };
 		E1EC1D2E26772F18003E58CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EC1D2C26772F18003E58CF /* Main.storyboard */; };
 		E1EC1D3126772F18003E58CF /* GetApiPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC1D2F26772F18003E58CF /* GetApiPractice.xcdatamodeld */; };
 		E1EC1D3326772F19003E58CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1EC1D3226772F19003E58CF /* Assets.xcassets */; };
@@ -18,10 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1C5080C267A14E7007C3787 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E1C50834267AFA71007C3787 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E1C5083D267B8375007C3787 /* BookMarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewCell.swift; sourceTree = "<group>"; };
+		E1C5083E267B8375007C3787 /* BookMarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookMarkTableViewCell.xib; sourceTree = "<group>"; };
 		E1EC1D2326772F17003E58CF /* GetApiPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetApiPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EC1D2626772F18003E58CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EC1D2826772F18003E58CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1EC1D2A26772F18003E58CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1EC1D2A26772F18003E58CF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		E1EC1D2D26772F18003E58CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1EC1D3026772F18003E58CF /* GetApiPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetApiPractice.xcdatamodel; sourceTree = "<group>"; };
 		E1EC1D3226772F19003E58CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +58,6 @@
 				E36AAEAA050EAA99631D5FCB /* Pods-GetApiPractice.debug.xcconfig */,
 				E92D74B9B085B94123F5BDBB /* Pods-GetApiPractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,9 +92,13 @@
 			children = (
 				E1EC1D2626772F18003E58CF /* AppDelegate.swift */,
 				E1EC1D2826772F18003E58CF /* SceneDelegate.swift */,
-				E1EC1D2A26772F18003E58CF /* ViewController.swift */,
+				E1EC1D2A26772F18003E58CF /* AddViewController.swift */,
 				E1EC1D2C26772F18003E58CF /* Main.storyboard */,
+				E1C5080C267A14E7007C3787 /* TableViewController.swift */,
+				E1C5083D267B8375007C3787 /* BookMarkTableViewCell.swift */,
+				E1C5083E267B8375007C3787 /* BookMarkTableViewCell.xib */,
 				E1EC1D3226772F19003E58CF /* Assets.xcassets */,
+				E1C50834267AFA71007C3787 /* DataManager.swift */,
 				E1EC1D3426772F19003E58CF /* LaunchScreen.storyboard */,
 				E1EC1D3726772F19003E58CF /* Info.plist */,
 				E1EC1D2F26772F18003E58CF /* GetApiPractice.xcdatamodeld */,
@@ -157,6 +168,7 @@
 				E1EC1D3626772F19003E58CF /* LaunchScreen.storyboard in Resources */,
 				E1EC1D3326772F19003E58CF /* Assets.xcassets in Resources */,
 				E1EC1D2E26772F18003E58CF /* Main.storyboard in Resources */,
+				E1C50840267B8375007C3787 /* BookMarkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +222,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1EC1D3126772F18003E58CF /* GetApiPractice.xcdatamodeld in Sources */,
-				E1EC1D2B26772F18003E58CF /* ViewController.swift in Sources */,
+				E1C50835267AFA71007C3787 /* DataManager.swift in Sources */,
+				E1EC1D2B26772F18003E58CF /* AddViewController.swift in Sources */,
 				E1EC1D2726772F18003E58CF /* AppDelegate.swift in Sources */,
+				E1C5080D267A14E7007C3787 /* TableViewController.swift in Sources */,
 				E1EC1D2926772F18003E58CF /* SceneDelegate.swift in Sources */,
+				E1C5083F267B8375007C3787 /* BookMarkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import UIKit
 import OpenGraph
 
-class ViewController: UIViewController {
+class AddViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var shortenUrlLabel: UILabel!
     @IBOutlet weak var orgUrlLabel: UILabel!
 
+    
 
     func jsonParse(data : Data) {
         if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
@@ -48,7 +49,6 @@ class ViewController: UIViewController {
                         image = UIImage(data: data!)
                         self.imageView.image = image
                     }
-
                 }
             case .failure(_):
                 return
@@ -79,13 +79,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
     }
     
     
     func saveUrl(orgUrl : String, shortenUrl : String){
         shortenUrlLabel.text = shortenUrl
         orgUrlLabel.text = orgUrl
+        DataManager.shared.addBookMark(orgUrl, shortenUrl: shortenUrl)
         print("in saveURL function")
         print(shortenUrl)
         print(orgUrl)
