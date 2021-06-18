@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X44-8D-IBr" userLabel="shortenUrlLabel">
-                        <rect key="frame" x="100" y="39.5" width="210" height="21"/>
+                        <rect key="frame" x="100" y="39.5" width="135" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,16 +35,38 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZY-gq-YCp">
+                        <rect key="frame" x="245" y="27.5" width="65" height="45"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsu-dS-G32">
+                                <rect key="frame" x="0.0" y="0.0" width="65" height="45"/>
+                                <connections>
+                                    <action selector="copyButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Es9-GL-QQP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rsu-dS-G32" secondAttribute="bottom" id="1pA-yy-NP4"/>
+                            <constraint firstAttribute="height" constant="45" id="7on-2g-k0N"/>
+                            <constraint firstAttribute="trailing" secondItem="Rsu-dS-G32" secondAttribute="trailing" id="LPd-fR-AGl"/>
+                            <constraint firstItem="Rsu-dS-G32" firstAttribute="leading" secondItem="4ZY-gq-YCp" secondAttribute="leading" id="Mls-cr-HZ3"/>
+                            <constraint firstItem="Rsu-dS-G32" firstAttribute="top" secondItem="4ZY-gq-YCp" secondAttribute="top" id="vOO-63-l9y"/>
+                            <constraint firstAttribute="width" constant="65" id="yG1-ep-QLB"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="X44-8D-IBr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IaT-5I-SSA"/>
                     <constraint firstItem="Xo3-Jk-btw" firstAttribute="top" secondItem="X44-8D-IBr" secondAttribute="bottom" constant="7" id="L5e-iB-ppO"/>
+                    <constraint firstItem="4ZY-gq-YCp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NvS-bY-gNy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Xo3-Jk-btw" secondAttribute="trailing" constant="10" id="VfZ-2p-uY9"/>
                     <constraint firstItem="Xo3-Jk-btw" firstAttribute="leading" secondItem="WC4-vo-Gw7" secondAttribute="trailing" constant="10" id="XWf-tz-d3m"/>
                     <constraint firstItem="WC4-vo-Gw7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dX6-WG-aao"/>
                     <constraint firstItem="X44-8D-IBr" firstAttribute="leading" secondItem="WC4-vo-Gw7" secondAttribute="trailing" constant="10" id="ds3-67-rVi"/>
+                    <constraint firstAttribute="trailing" secondItem="4ZY-gq-YCp" secondAttribute="trailing" constant="10" id="l0T-AP-qKK"/>
                     <constraint firstItem="WC4-vo-Gw7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nmH-OQ-Fmh"/>
-                    <constraint firstAttribute="trailing" secondItem="X44-8D-IBr" secondAttribute="trailing" constant="10" id="qyI-S8-jyg"/>
+                    <constraint firstItem="4ZY-gq-YCp" firstAttribute="leading" secondItem="X44-8D-IBr" secondAttribute="trailing" constant="10" id="pNf-QN-GRh"/>
                     <constraint firstAttribute="bottom" secondItem="WC4-vo-Gw7" secondAttribute="bottom" constant="10" id="ySw-CH-5WI"/>
                 </constraints>
             </tableViewCellContentView>
@@ -52,11 +75,15 @@
                 <outlet property="ogImageView" destination="WC4-vo-Gw7" id="O6f-1d-pJI"/>
                 <outlet property="orgUrlLabel" destination="Xo3-Jk-btw" id="xYI-xl-47w"/>
                 <outlet property="shortenUrlLabel" destination="X44-8D-IBr" id="60M-eg-uEB"/>
+                <outlet property="testView" destination="4ZY-gq-YCp" id="gyN-bn-vml"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="3.3482142857142856"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="square.and.arrow.up.on.square.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

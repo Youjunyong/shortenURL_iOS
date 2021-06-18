@@ -79,3 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//
+//curl "https://openapi.naver.com/v1/util/shorturl" \
+//    -d "url=https://trip.coupang.com/m/tp/products/100000018716?q=일본&selectDate=&searchId=970dc3fb972847ff96dcf4a017be54df&searchGroupId=5abe9bde72704dc1acf53f96559af0be&rank=1&listType=TSRP&linkCode=" \
+//    -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" \
+//    -H "X-Naver-Client-Id: riSTh9tti8xFddxQsnK_" \
+//    -H "X-Naver-Client-Secret: yvi1OHlNhg" -v
