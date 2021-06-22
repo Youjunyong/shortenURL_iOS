@@ -3,7 +3,8 @@
 ## 개요
 
 ios와 서버와의 HTTP 요청을 공부하고, Open API를 사용한 간단한 앱을 만들어보고 싶었다.
-Naver Open API (https://developers.naver.com/docs/common/openapiguide/)에서 URL을 짧게 줄여주는 서비스가 있길래 사용해보았다.하루 2만 5천회까지 사용 가능하다.
+Naver Open API https://developers.naver.com/docs/common/openapiguide/  
+서 URL을 짧게 줄여주는 서비스가 있길래 사용해보았다.하루 2만 5천회까지 사용 가능하다.
 
 URL만 줄여주는건 너무 간단한것 같아서, 해당 URL의 HTML을 파싱한 후에, ogtag-img를 가져왔다. 그리고 이를 이용해 history(bookmark) 페이지를 하나 더 구성해보았다.
 
