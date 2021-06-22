@@ -78,7 +78,7 @@ func requestGet(query: String, completionHandler: @escaping (Bool, Any) -> Void)
         let apiUrl : String = "https://openapi.naver.com/v1/util/shorturl.json?url=\(query)"
   
         guard let encodedUrl = apiUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-        // percentEncoding을 해주지 않으면, URL에 한글이 들어갔을때 통신이 안돼었다..
+        // URL에 한글이 들어갈 경우를 대비해서 encoding을 해줘야한다.
         
             return
         }
