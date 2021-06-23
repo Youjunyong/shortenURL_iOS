@@ -52,7 +52,7 @@ curl로 응답을 받아보면
 
 
 
-> swift Json을 파싱하기 위한 Codable 구조체
+
 
 ```swift
 struct Response: Codable {
@@ -76,6 +76,7 @@ struct Response: Codable {
 func requestGet(query: String, completionHandler: @escaping (Bool, Any) -> Void) {
         let clientID = "클라이언트 ID"
         let clientSecret = "클라이언트 secret"
+        // naver에서 애플리케이션 등록을하면 알려준다.
         let apiUrl : String = "https://openapi.naver.com/v1/util/shorturl.json?url=\(query)"
   
         guard let encodedUrl = apiUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
@@ -100,7 +101,6 @@ func requestGet(query: String, completionHandler: @escaping (Bool, Any) -> Void)
             }
             guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
                 DispatchQueue.main.async {
-                    self.orgUrlLabel.text = "유효한 URL을 입력해주세요"
                 }
                 return
             }
