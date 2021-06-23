@@ -101,8 +101,6 @@ func requestGet(query: String, completionHandler: @escaping (Bool, Any) -> Void)
                 return
             }
             guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
-                DispatchQueue.main.async {
-                }
                 return
             }
             guard let output = try? JSONDecoder().decode(Response.self, from: data) else {
