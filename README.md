@@ -11,7 +11,7 @@ URL만 줄여주는건 너무 간단한것 같아서, 해당 URL의 HTML을 파�
 
 
 
-## 작동 화면
+##  화면
 ![Simulator Screen Recording - iPhone 12 - 2021-06-22 at 19 44 18](https://user-images.githubusercontent.com/46234386/122911652-7960b900-d392-11eb-8cc2-0bb48e33442b.gif)
 
 
